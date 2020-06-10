@@ -10,14 +10,17 @@ var tokyoRelease = function () {
 
 var trigger = function () {
         state = true
-        document.bgColor = "red";
-        document.getElementById("body").setAttribute('style', "background-image:linear-gradient(-45deg,#ff0000 25 %,#000 25 %, #000 50 %,#ff0000 50 %, #ff0000 75 %,#000 75 %, #000);")
+        // document.bgColor = "red";
+        body.classList.add('state1');
+        body.classList.remove('state2');
         tokyoAlert()
 }
 
 var end = function () {
         state = false
-        document.bgColor = "white";
+        // document.bgColor = "white";
+        body.classList.add('state2');
+        body.classList.remove('state1');
         tokyoRelease()
 }
 
